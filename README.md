@@ -1,12 +1,15 @@
 # FaceDoorLock
-This repository is the conclusion of my project which i creat an Embedded facial access system with a 3d printed lock, that could be notified and configured via a Telegram/messenger BOT
+
+This repository is the conclusion of my project, which I created an Embedded facial access system with a 3d printed lock, that could be notified and configured via a Telegram/messenger BOT
+
 
 ## Overview 
-Our system will work as shown in image below :
+
+Our system will work as shown in the image below:
 
 ![Image of the system](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/overview.png)
 
-In front of our barriere, the camera collecte the image of the car and send it wirelessly our Node Red server where we trait the image and detect the plate, then we extract the numbers and compare it to our DB -Data Base-, this to send the ordre to open or close the barriere.
+In front of our barrier, the camera collects the image of the car and send it wirelessly our Node Red server where we trait the image and detect the plate, then we extract the numbers and compare it to our DB -Data Base-, this to send the order to open or close the barrier.
 
 ## Parts of This project 
 
@@ -22,22 +25,22 @@ this project is diveded into 5 parts :
 
 ### 1. The Prototype 
     
-   in This prototype I used an ESP32-CAM to collect images and then send it via MQTT to the Node Red server, where I used my script to analyse and traite the image then resize it in a way we can only see the car plate, then we move to the next part where we use an OCR (optical character recognition) - based on an KNN algorithm methode - to extract the characters, and compared the text with our data base on node red to send back the order to the ESP32-CAM to Open the barriere in case we found the plate , else it stay closed.
+   In This prototype I used an ESP32-CAM to collect images and then send it via MQTT to the Node Red server, where I used my script to analyze and treat the image then resize it in a way we can only see the car plate, then we move to the next part where we use an OCR (optical character recognition) - based on an KNN algorithm method - to extract the characters, and compared the text with our data base on node red to send back the order to the ESP32-CAM to Open the Barrier in case we found the plate, else it stay closed.
    
    what we used : 
    
     * ESP32 CAM 
-    * MQTT protocol (& BROKER)
+    * MQTT protocol
     * NODE RED 
-    * Plate detection (a created python module 82% accuracy )
-    * OCR ( TensorFlow script google version )
-    * A Servo-Motor ( to simulate the barriere )
+    * Plate detection (a created python module 82% accuracy)
+    * OCR (TensorFlow script google version)
+    * A Servo-Motor (to simulate the barriere)
     * A car toys with a ticket as plate
    
   Desc. | Image 
 ------------ | -------------
-The Esp32 camera that detect the car plate | ![ESP32 CAM](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/esp32CAM.png) 
-Simulation of a barriere with a Servo Motor | ![barriere](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/barriere.png)
+The Esp32 camera that detects the car plate | ![ESP32 CAM](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/esp32CAM.png) 
+Simulation of a barrier with a Servo Motor | ![barriere](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/barriere.png)
 Car with a plate | ![Car](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/car.png)
 As results | we found in the Node red dashboard :  Text `NU70REG `   
    
@@ -45,14 +48,14 @@ As results | we found in the Node red dashboard :  Text `NU70REG `
    
 ### 2. The online version 
 
-we do the same as the prototype but this time we gonna use some reliable materials : 
+We do the same as the prototype, but this time we gonna use some reliable materials:
 
-* using a commercial wireless camera with a good quality : 
+* Using a commercial wireless camera with a good quality:
 
  ![CAMERA](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/alhuacam.png) 
-
-Then we link it the server part via MQTT ( & Mosquitto broker), and we proccess as we did before; 
-  we do a test by a picture of a car and we found those results : 
+ 
+Then we link it the server part via MQTT (& Mosquitto broker), and we process as we did before;   
+We do a test by a picture of a car and we found these results:  
   
   Node Red | Dashboard
   ------------ | -------------
@@ -62,19 +65,20 @@ Then we link it the server part via MQTT ( & Mosquitto broker), and we proccess 
  
 ### 3. The Embedded version 
 
-Instead of using too many part ( camera , serveur ... ), we try to use the whole system in just one card;
-we were able to use the ESP32 CAM with Micropython, that's allow us to use too many options, we were able to do the car plate detection and also the OCR inside the ESP32CAM
-
-after some tests we decided to group the parts and creat the circuit and the pcd, as you can see below : 
+   Instead of using too many parts (camera, server...), we try to use the whole system in just one card; We were able to use the ESP32 CAM with Micropython, that's allowed us to use too many options, we were able to do the car plate detection and also the OCR inside the ESP32CAM .
+   
+   After some tests we decided to group the parts and create the circuit and the pcd, as you can see below: 
 
   Circuit | Card
   ------------ | ------------- 
 ![circuit](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/circuit.png) | ![pcb](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/pcb.png) 
 
-BUT the system failed !!
+**** BUT the system failed !!
 
-due to the lack of the esp32cam power, we faced an overhated, an fps drop , low accuracy ... 
-so we back to the old system , the online version and keeping the esp32CAM installed on this tiny card.
+Due to the low ressources of the esp32cam, we faced an overheated, an fps drop, low accuracy problems... 
+
+So we back to the old system, the online version and keeping the esp32CAM installed on this tiny card.  
+   
 
 ### 5. Conception of the barriere
 
