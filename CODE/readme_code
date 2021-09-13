@@ -1,4 +1,11 @@
 #CODE 
 
-this code is used in a ESP32-CAM based on arduino ! 
+In this folder you will find the code used for : 
 
+  * ESP32-CAM taking picture whenever there's a car in front of the barrier (presence sensor)
+  * ESP32-CAM Streaming then taking picture to the car based on the stream analyse
+  * NODE RED flows in palette & tools
+  * Script Python for detecting a car & then thier licence plate
+  * Script OCR to extract the licence plate numbers
+  
+  -- Comming Soon --
