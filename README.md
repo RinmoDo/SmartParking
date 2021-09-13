@@ -1,7 +1,6 @@
-# FaceDoorLock
+# Smart Parking
 
-This repository is the conclusion of my project, which I created an Embedded facial access system with a 3d printed lock, that could be notified and configured via a Telegram/messenger BOT
-
+This repository is the conclusion of my project, that I created an Embedded parking-access system with a the conception of the barrier, that would be allowed or denied the access for car that not belong to schools stuffs.
 
 ## Overview 
 
