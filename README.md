@@ -1,6 +1,6 @@
 # Smart Parking
 
-This repository is the conclusion of my project; creating an Embedded parking-access system with the design of an electromechanical barrier, that allow or deny access for cars that not belong to schools stuffs.
+This repository is the conclusion of my project; creating an Embedded parking-access system with the design of an electromechanical barrier, that allows or denies access for cars that not belong to schools stuffs.
 
 ## Overview 
 
