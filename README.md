@@ -6,7 +6,7 @@ This repository is the conclusion of my project, that I created an Embedded park
 
 Our system will work as shown in the image below:
 
-![Image of the system](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/overview.png)
+![Image of the system](https://github.com/RinmoDo/SmartParking/blob/main/images/overview.png)
 
 In front of our barrier, the camera collects the image of the car and send it wirelessly our Node Red server where we trait the image and detect the plate, then we extract the numbers and compare it to our DB -Data Base-, this to send the order to open or close the barrier.
 
@@ -14,11 +14,11 @@ In front of our barrier, the camera collects the image of the car and send it wi
 
 this project is diveded into 5 parts : 
 
-1. [The Prototype](https://github.com/RinmoDo/FaceDoorLock#1-the-prototype)
-2. [The online version ](https://github.com/RinmoDo/FaceDoorLock#2-the-online-version)
-3. [The Embedded version ](https://github.com/RinmoDo/FaceDoorLock#3-The-Embedded-version )
-4. [Using Material](https://github.com/RinmoDo/FaceDoorLock#4-Using-Material)
-5. [Conception of the barriere](https://github.com/RinmoDo/FaceDoorLock#5-Conception-of-the-barriere)
+1. [The Prototype](https://github.com/RinmoDo/SmartParking#1-the-prototype)
+2. [The online version ](https://github.com/RinmoDo/SmartParking#2-the-online-version)
+3. [The Embedded version ](https://github.com/RinmoDo/SmartParking#3-The-Embedded-version )
+4. [Using Material](https://github.com/RinmoDo/SmartParking#4-Using-Material)
+5. [Conception of the barriere](https://github.com/RinmoDo/SmartParking#5-Conception-of-the-barriere)
 
 *** 
 
@@ -38,9 +38,9 @@ this project is diveded into 5 parts :
    
   Desc. | Image 
 ------------ | -------------
-The Esp32 camera that detects the car plate | ![ESP32 CAM](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/esp32CAM.png) 
-Simulation of a barrier with a Servo Motor | ![barriere](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/barriere.png)
-Car with a plate | ![Car](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/car.png)
+The Esp32 camera that detects the car plate | ![ESP32 CAM](https://github.com/RinmoDo/SmartParking/blob/main/images/esp32CAM.png) 
+Simulation of a barrier with a Servo Motor | ![barriere](https://github.com/RinmoDo/SmartParking/blob/main/images/barriere.png)
+Car with a plate | ![Car](https://github.com/RinmoDo/SmartParking/blob/main/images/car.png)
 As results | we found in the Node red dashboard :  Text `NU70REG `   
    
    ***
@@ -51,14 +51,14 @@ We do the same as the prototype, but this time we gonna use some reliable materi
 
 * Using a commercial wireless camera with a good quality:
 
- ![CAMERA](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/alhuacam.png) 
+ ![CAMERA](https://github.com/RinmoDo/SmartParking/blob/main/images/alhuacam.png) 
  
 Then we link it the server part via MQTT (& Mosquitto broker), and we process as we did before;   
 We do a test by a picture of a car and we found these results:  
   
   Node Red | Dashboard
   ------------ | -------------
-![TEST](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/testreasult.png) | ![TZST](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/testDashboard.png) 
+![TEST](https://github.com/RinmoDo/SmartParking/blob/main/images/testreasult.png) | ![TZST](https://github.com/RinmoDo/SmartParking/blob/main/images/testDashboard.png) 
  
  ***
  
@@ -70,7 +70,7 @@ We do a test by a picture of a car and we found these results:
 
   Circuit | Card
   ------------ | ------------- 
-![circuit](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/circuit.png) | ![pcb](https://github.com/RinmoDo/FaceDoorLock/blob/main/images/pcb.png) 
+![circuit](https://github.com/RinmoDo/SmartParking/blob/main/images/circuit.png) | ![pcb](https://github.com/RinmoDo/SmartParking/blob/main/images/pcb.png) 
 
 **** BUT the system failed !!
 
