@@ -8,7 +8,7 @@ Our system will work as shown in the image below:
 
 ![Image of the system](https://github.com/RinmoDo/SmartParking/blob/main/images/overview.png)
 
-In front of our barrier, the camera collects the image of the car and send it wirelessly our Node Red server where we trait the image and detect the plate, then we extract the numbers and compare it to our DB -Data Base-, this to send the order to open or close the barrier.
+In front of our barrier, the camera collects the image of the car and send it wirelessly to our Node Red server where we trait the image and detect the plate, then we extract the numbers and compare it to our DB -Data Base-, this to send the order to open or close the barrier.
 
 ## Parts of This project 
 
